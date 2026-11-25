@@ -1,0 +1,216 @@
+
+.destaques-f1 {
+  width: 100%;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.destaques-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.destaques-topo h2 {
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.destaques-etiqueta {
+  color: #ef3340;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.destaques-temporada {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ef3340;
+}
+
+.destaque-banner {
+  position: relative;
+  min-height: 350px;
+  padding: 35px;
+  border-radius: 16px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(ellipse at 85% 20%, #5b2028 0%, transparent 45%),
+    linear-gradient(120deg, #151a24, #252b37 60%, #10131a);
+
+  border: 1px solid #343b48;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.destaque-banner::after {
+  content: "F1";
+  position: absolute;
+  right: 30px;
+  bottom: -80px;
+  font-size: 280px;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(255,255,255,0.035);
+  pointer-events: none;
+}
+
+.destaque-conteudo {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+}
+
+.destaque-tag {
+  display: inline-block;
+  background: #e32636;
+  padding: 8px 13px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.destaque-conteudo h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 18px 0 8px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.destaque-conteudo h2 {
+  font-size: 20px;
+}
+
+.destaque-conteudo p {
+  color: #c2c8d2;
+  margin-bottom: 12px;
+}
+
+.contagem-regressiva {
+  margin-top: 28px;
+}
+
+.contagem-regressiva > span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #ef5964;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.contador-numeros {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contador-numeros div {
+  min-width: 75px;
+  padding: 12px;
+  background: #ffffff12;
+  border: 1px solid #ffffff20;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contador-numeros strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.contador-numeros small {
+  display: block;
+  font-size: 10px;
+  color: #b9c0ca;
+  margin-top: 4px;
+}
+
+.contagem-regressiva > small {
+  display: block;
+  margin-top: 10px;
+  color: #aab2bf;
+}
+
+.destaque-controles {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.destaque-controles button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ffffff40;
+  background: #ffffff15;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.destaque-controles button:hover {
+  background: #e32636;
+}
+
+.destaque-indicadores {
+  display: flex;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.indicador {
+  height: 5px;
+  width: 35px;
+  border: 0;
+  border-radius: 10px;
+  background: #59616e;
+  cursor: pointer;
+}
+
+.indicador.ativo {
+  background: #e32636;
+  width: 55px;
+}
+
+.erro-destaques {
+  color: #ef5964;
+}
+
+@media (max-width: 650px) {
+  .destaque-banner {
+    padding: 22px;
+    min-height: 400px;
+  }
+
+  .destaque-conteudo h1 {
+    font-size: 28px;
+  }
+
+  .contador-numeros {
+    gap: 6px;
+  }
+
+  .contador-numeros div {
+    min-width: 62px;
+    padding: 9px;
+  }
+
+  .contador-numeros strong {
+    font-size: 23px;
+  }
+
+  .destaque-controles {
+    right: 15px;
+    bottom: 15px;
+  }
+}

@@ -1,0 +1,89 @@
+
+.resultados-carregando,
+.resultados-erro {
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.resultados-erro button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #e10600;
+  color: white;
+  cursor: pointer;
+}
+
+.resultados-pagina table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resultados-pagina th,
+.resultados-pagina td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.resultados-pagina th {
+  color: #999;
+  font-size: 12px;
+}
+
+.resultados-pagina td {
+  color: white;
+}
+
+.posicao-piloto {
+  font-weight: bold;
+  color: #e10600 !important;
+}
+
+.pontos-piloto {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.resultado-piloto {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resultado-piloto img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #222;
+}
+
+.cor-equipe {
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+.selecionada{
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #e10600;
+  color: white;
+  cursor: pointer;
+}
+.semSelecionar{
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #888785;
+  color: white;
+  cursor: pointer;
+}

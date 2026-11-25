@@ -1,0 +1,518 @@
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image:
+    linear-gradient(
+      rgba(5, 8, 15, 0.82),
+      rgba(5, 8, 15, 0.90)
+    ),
+    url("/imagens/fundo-f1.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #05080f;
+}
+
+.app {
+  min-height: 100vh;
+  background: transparent;
+}
+.sidebar {
+  width: 245px;
+  position: fixed;
+  inset: 0 auto 0 0;
+  background: #111116;
+  border-right: 1px solid #292930;
+  padding: 30px 18px;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 10px 35px;
+}
+
+.logo-icon {
+  background: #e10600;
+  color: white;
+  font-weight: 1000;
+  font-size: 25px;
+  font-style: italic;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.logo strong {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.logo small,
+.menu-label,
+.card-label,
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  font-weight: 800;
+}
+
+.logo small {
+  color: #85858e;
+}
+
+.menu-label {
+  color: #777780;
+  padding: 0 12px;
+  margin-bottom: 14px;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 7px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #a7a7b1;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.menu-item > span {
+  width: 22px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.menu-item:hover,
+.menu-item.ativo {
+  background: #292025;
+  color: white;
+}
+
+.menu-item.ativo {
+  border-left: 3px solid #e10600;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 15px 8px;
+  border-top: 1px solid #292930;
+  color: #c6c6ce;
+  font-size: 12px;
+}
+
+.sidebar-footer small {
+  color: #777780;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #129b5f;
+}
+
+.main {
+  margin-left: 245px;
+  padding: 32px 38px;
+  max-width: 1700px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 27px;
+}
+
+.breadcrumb,
+.muted {
+  color: #888891;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.topbar h2,
+.section-heading h2 {
+  margin: 8px 0 0;
+  font-size: 24px;
+}
+
+.season-badge {
+  border: 1px solid #34343d;
+  border-radius: 6px;
+  padding: 11px 14px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+
+.welcome {
+  min-height: 450px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+
+  background: #111116;
+
+  border: 1px solid #353039;
+  border-radius: 12px;
+
+  padding: 36px 40px;
+}
+
+/* IMAGEM DE FUNDO EM MOVIMENTO */
+
+.welcome::before {
+  content: "";
+
+  position: absolute;
+  inset: -80px 0;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(10, 10, 15, 0.96) 0%,
+      rgba(10, 10, 15, 0.78) 40%,
+      rgba(10, 10, 15, 0.15) 100%
+    ),
+    url("/imagens/f1.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transform: translateY(
+    calc(var(--scroll-offset, 0px) * -1)
+  );
+
+  will-change: transform;
+
+  z-index: -1;
+}
+
+/* TEXTO NA FRENTE */
+
+.welcome-content {
+  max-width: 540px;
+  position: relative;
+  z-index: 2;
+}
+
+/* NÚMERO DECORATIVO */
+
+.racing-number {
+  position: absolute;
+  right: 7%;
+  top: 20px;
+
+  font-size: clamp(120px, 20vw, 260px);
+  font-weight: 1000;
+  font-style: italic;
+
+  color: #ffffff08;
+  line-height: 1;
+
+  z-index: 1;
+}
+
+/* FAIXA VERMELHA */
+
+.red-stripe {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+
+  width: 12px;
+  height: 230px;
+
+  background: #e10600;
+  transform: rotate(35deg);
+}
+
+.primary-button {
+  margin-top: 15px;
+  background: #e10600;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 13px 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primary-button span {
+  margin-left: 14px;
+}
+
+.racing-number {
+  position: absolute;
+  right: 7%;
+  top: 20px;
+  font-size: clamp(120px, 20vw, 260px);
+  font-weight: 1000;
+  font-style: italic;
+  color: #ffffff08;
+  line-height: 1;
+}
+
+.red-stripe {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  width: 12px;
+  height: 230px;
+  background: #e10600;
+  transform: rotate(35deg);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 35px 0 20px;
+  gap: 15px;
+}
+
+.section-heading h2 {
+  font-size: 22px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.info-card {
+  background: #17171d;
+  border: 1px solid #2c2c34;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 0;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  border-color: #8c2929;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.card-icon {
+  font-size: 25px;
+}
+
+.card-arrow {
+  color: #777780;
+}
+
+.card-label {
+  color: #8c8c96;
+  font-size: 9px;
+}
+
+.info-card h3 {
+  margin: 10px 0;
+  font-size: 21px;
+}
+
+.info-card p {
+  min-height: 35px;
+  color: #9c9ca6;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.info-card button {
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f04444;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #74747e;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-top: 38px;
+  padding: 20px 0;
+  border-top: 1px solid #292930;
+}
+
+@media (max-width: 1100px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    padding: 17px;
+  }
+
+  .logo {
+    padding-bottom: 18px;
+  }
+
+  .menu-label,
+  .sidebar-footer {
+    display: none;
+  }
+
+  .sidebar nav {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .menu-item {
+    width: auto;
+    flex-shrink: 0;
+    padding: 10px;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 20px 15px;
+  }
+
+  .topbar h2 {
+    font-size: 20px;
+  }
+
+  .season-badge {
+    font-size: 8px;
+    padding: 9px;
+  }
+
+  .welcome {
+    padding: 26px 20px;
+    min-height: 290px;
+  }
+
+  .welcome h1 {
+    font-size: 38px;
+  }
+
+  .racing-number {
+    right: -8px;
+    top: 40px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading .muted {
+    display: none;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
+
+
+/* Página de apresentação e documentação do produto */
+.project-info {
+  padding: 28px 0 10px;
+}
+.project-info h1 {
+  margin: 10px 0;
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: -1.8px;
+}
+.project-lead {
+  max-width: 760px;
+  color: #b3b3bd;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.project-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+.project-info-card, .project-functions {
+  background: #17171d;
+  border: 1px solid #2c2c34;
+  border-radius: 10px;
+  padding: 23px;
+}
+.project-info-card > span {
+  color: #f04444;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+.project-info-card h3 { margin: 12px 0 8px; font-size: 19px; }
+.project-info-card p, .project-functions li {
+  color: #a6a6b0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.project-functions { margin-top: 16px; }
+.project-functions h2 { margin-top: 0; font-size: 20px; }
+.project-functions ul { padding-left: 20px; }
+.project-doc-note {
+  margin-top: 18px;
+  padding: 16px;
+  border-left: 3px solid #e10600;
+  background: #17171d;
+  color: #aaaab4;
+  font-size: 12px;
+  line-height: 1.8;
+}
+@media (max-width: 650px) {
+  .project-info-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,326 @@
+
+.calendario-page {
+  width: 100%;
+  color: #f5f5f7;
+  padding: 28px;
+  background: #0b0b0e;
+  min-height: 100vh;
+}
+
+.calendario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.calendario-etiqueta {
+  color: #ff3030;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.calendario-header h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 12px 0 6px;
+}
+
+.calendario-header p,
+.calendario-lista-header p {
+  color: #9999a3;
+}
+
+.temporada-ano {
+  color: rgba(255, 255, 255, 0.08);
+  font-size: clamp(60px, 12vw, 120px);
+  font-weight: 900;
+}
+
+.proxima-corrida {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 40px;
+  border: 1px solid #3b2528;
+  border-radius: 14px;
+  background: linear-gradient(110deg, #211316, #151519 70%);
+}
+
+.proxima-corrida h2 {
+  margin: 14px 0 8px;
+  font-size: clamp(22px, 3vw, 32px);
+}
+
+.proxima-corrida p {
+  color: #b7b7c0;
+  margin-bottom: 18px;
+}
+
+.proxima-corrida strong {
+  color: #ff4545;
+}
+
+.proxima-numero {
+  color: rgba(255, 255, 255, 0.06);
+  font-size: clamp(90px, 15vw, 170px);
+  font-weight: 900;
+}
+
+.calendario-lista-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.calendario-lista-header h2 {
+  margin-bottom: 6px;
+}
+
+.calendario-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.calendario-filtros button {
+  padding: 10px 16px;
+  border: 1px solid #303036;
+  border-radius: 7px;
+  color: #bdbdc5;
+  background: #151519;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.calendario-filtros button:hover,
+.calendario-filtros button.filtro-ativo {
+  color: white;
+  background: #e10600;
+  border-color: #e10600;
+}
+
+.corridas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.corrida-card {
+  padding: 22px;
+  border: 1px solid #29292f;
+  border-radius: 12px;
+  background: #141418;
+  transition: 0.2s;
+}
+
+.corrida-card:hover {
+  transform: translateY(-3px);
+  border-color: #e10600;
+}
+
+.corrida-topo,
+.corrida-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.corrida-topo {
+  color: #85858e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.status {
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+.status-realizada {
+  color: #aaaab3;
+  background: #29292f;
+}
+
+.status-próxima {
+  color: #ff7777;
+  background: #3a1719;
+}
+
+.status-em-andamento {
+  color: #80e6a2;
+  background: #153522;
+}
+
+.corrida-pais {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: #bdbdc5;
+  font-size: 13px;
+}
+
+.corrida-bandeira {
+  font-size: 28px;
+}
+
+.corrida-card h3 {
+  margin: 12px 0 8px;
+  font-size: 21px;
+}
+
+.corrida-circuito {
+  color: #92929c;
+  font-size: 13px;
+}
+
+.corrida-rodape {
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #2b2b31;
+  color: #aaaab3;
+  font-size: 12px;
+}
+
+.corrida-rodape strong {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .calendario-page {
+    padding: 18px;
+  }
+
+  .corridas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .temporada-ano {
+    font-size: 60px;
+  }
+
+  .proxima-corrida {
+    padding: 22px;
+  }
+}
+.welcome {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 60px;
+
+  background: linear-gradient(
+    120deg,
+    #101014,
+    #1c1c22,
+    #080808
+  );
+
+  color: white;
+}
+
+/* Conteúdo principal */
+
+.welcome-content {
+  position: relative;
+  z-index: 3;
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: #ff3030;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.welcome h1 {
+  font-size: clamp(40px, 5vw, 75px);
+  line-height: 1.05;
+  margin: 25px 0;
+}
+
+.welcome p {
+  color: #b8b8b8;
+  font-size: 18px;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+/* Botão */
+
+.primary-button {
+  background: #e10600;
+  color: white;
+  border: none;
+
+  padding: 16px 25px;
+  margin-top: 20px;
+
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Número decorativo */
+
+.racing-number {
+  position: absolute;
+  right: 70px;
+  top: 30px;
+
+  font-size: 180px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.04);
+}
+
+/* Faixa vermelha */
+
+.red-stripe {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 8px;
+  height: 100%;
+
+  background: #e10600;
+}
+
+/* CARRO F1 */
+
+.f1-car {
+  position: absolute;
+
+  width: 550px;
+
+  right: 5%;
+  bottom: 35px;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  transition: transform 0.1s linear;
+
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.7));
+}
+.status-cancelada {
+  color: #ff5252;
+  background: rgba(255, 82, 82, 0.12);
+}
